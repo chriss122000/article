@@ -1,0 +1,44 @@
+version: "3.8"
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "3000:3000"
+    # volumes:
+    #   - ./backend:/app
+    depends_on:
+      - mariadb
+    env_file:
+    - ./backend/.env
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3001:3000"
+    # volumes:
+    #   - ./frontend:/app
+    #   - ./frontend/.env:/app/.env
+    depends_on:
+      - backend
+    env_file:
+    - ./frontend/.env
+
+  mariadb:
+    image: mariadb
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: password
+      MYSQL_DATABASE: mydb
+    volumes:
+      - ./backend/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+volumes:
+  mariadb_data:
