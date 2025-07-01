@@ -52,6 +52,8 @@ Create .env files in both the frontend and backend directories
 # 🧭 Project Structure
 
 ```
+
+
 ├── frontend                # React frontend
 │   ├── public
 │   ├── src
@@ -62,6 +64,8 @@ Create .env files in both the frontend and backend directories
 │   ├── Dockerfile
 │   └── .env
 └── docker-compose.yml      # Docker Compose file
+
+
 
 
 ```
