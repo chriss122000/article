@@ -49,11 +49,9 @@ npm install
 
 Create .env files in both the frontend and backend directories
 
-# 🧭 Project Structure
+# Project Structure
 
 ```
-
-
 ├── frontend                # React frontend
 │   ├── public
 │   ├── src
@@ -69,6 +67,7 @@ Create .env files in both the frontend and backend directories
 
 
 ```
+
 
 # Environment Variables
 ## Backend (backend/.env)
