@@ -6,8 +6,6 @@ Cette application est une solution **Fullstack CRUD** construite avec :
 - **NestJS** pour le backend
 - **MariaDB** comme base de données
 
-Le tout est entièrement **dockerisé** pour un déploiement et une installation simplifiés.
-
 
 ## Technologie Stack
 
@@ -15,9 +13,10 @@ Le tout est entièrement **dockerisé** pour un déploiement et une installation
 - 🧠 **Backend** : NestJS, TypeORM, MariaDB, Docker  
 - 🗃️ **Base de données** : MariaDB
 
+
 ## Installation
 
-## 📦 Prérequis
+### Prerequisites
 
 - ⚙️ [Node.js](https://nodejs.org/) (v16 ou supérieur)  
 - 🐳 [Docker](https://www.docker.com/)
@@ -26,11 +25,13 @@ Le tout est entièrement **dockerisé** pour un déploiement et une installation
 
 #### Clone the repository
 
-```bash
+```
 git clone git@github.com:chriss122000/article.git
-cd article
+
 git switch dev
 
+cd article
+```
 
 
 #### Install dependencies
@@ -90,34 +91,48 @@ REACT_APP_PORT=3001
 
 ```
 
-🐳 Lancer le projet avec Docker
-🔧 Build & Run
-bash
-Copier
-Modifier
-docker-compose up --build
-📌 Cela construira et démarrera tous les services définis dans docker-compose.yml.
+# Docker
+Docker is used to create and run containers for both the backend and frontend.
 
-🌐 Accès à l’application
-🖥️ Frontend : http://localhost:3001
+## Build and Run with Docker
+### Run Docker Compose
 
-🧩 Backend API : http://localhost:3000
+```docker-compose up --build```
 
-🗄️ MariaDB (via un client type Adminer ou DBeaver) : localhost:3306
+This will build and start all services as defined in docker-compose.yml.
 
-🛠️ Commandes Docker utiles
-Action	Commande
-🔻 Arrêter les services	docker-compose down
-🧾 Voir les logs	`docker-compose logs -f <backend
-🔁 Rebuild un service	docker-compose up --build <service>
-🔁 Recréer tous les conteneurs	docker-compose up -d --force-recreate
+### Access the Application
 
-📝 Remarques
-⚠️ Ne pas oublier de créer les fichiers .env avant de lancer les services.
+Frontend: http://localhost:3001
 
-✅ L’API est protégée par une authentification (standard ou JWT selon l’implémentation).
+Backend API: http://localhost:3000
 
-📦 Le script init.sql initialise la base de données automatiquement via Docker.
+Adminer interface: http://localhost:3306
 
-✅ Statut : Fonctionnel avec docker-compose up -d
-Merci pour votre attention 🙏 et bonne utilisation !
+### Useful Docker Commands
+
+Stop all services:
+
+
+```docker-compose down```
+
+
+### View logs for all services:
+
+
+
+```docker-compose logs -f <backend|frontend|mariadb>```
+
+
+### Rebuild a specific service:
+
+
+
+```docker-compose up --build <backend|frontend|mariadb>```
+
+
+### Force recreate container:
+
+
+
+```sudo docker compose up -d --force-recreate```
