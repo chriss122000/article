@@ -6,6 +6,7 @@ import { Header } from "./components/Common/Header";
 import { Home } from "./pages/home";
 import { SigninPage } from "./pages/auth/signin";
 import { SignupPage } from "./pages/auth/signup";
+import { ArticlePage } from "./pages/article";
 
 
 const App: React.FC = () => {
@@ -16,6 +17,7 @@ const App: React.FC = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/articles" element={<ArticlePage />} />
           <Route path="/signin" element={<SigninPage />} />
           <Route path="/signup" element={<SignupPage />} />
         </Routes>
