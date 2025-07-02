@@ -87,9 +87,9 @@ export const SigninComponent = () => {
           flexDirection={"column"}
         >
           <img
-            src={`${process.env.PUBLIC_URL}/rb_2309.png`}
+            src={`${process.env.PUBLIC_URL}/rb_2222.png`}
             alt="Logo"
-            style={{ height: 50, width: 50 }}
+            style={{ height: 100, width: 100 }}
           />
           <Typography
             variant="h3"
