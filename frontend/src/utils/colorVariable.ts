@@ -3,7 +3,7 @@ export const colorVariable = {
     orange: "#E64833",
     marron: "#874F41",
     grey: "#90AEAD",
-    beige: "#FBE9D0",
+    beige: "#EAF9F2",
     navy: "#0A192F",
     violet: "#6C63FF"
   };
